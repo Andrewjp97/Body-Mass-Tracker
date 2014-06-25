@@ -13,6 +13,7 @@
 		AE63B334195B4AB000C36F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE63B332195B4AB000C36F5B /* Main.storyboard */; };
 		AE63B336195B4AB000C36F5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE63B335195B4AB000C36F5B /* Images.xcassets */; };
 		AE63B342195B4AB000C36F5B /* Body_Weight_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63B341195B4AB000C36F5B /* Body_Weight_ManagerTests.swift */; };
+		AE63B34C195B4BC700C36F5B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE63B34B195B4BC700C36F5B /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		AE63B33B195B4AB000C36F5B /* Body Weight ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Body Weight ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE63B340195B4AB000C36F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE63B341195B4AB000C36F5B /* Body_Weight_ManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body_Weight_ManagerTests.swift; sourceTree = "<group>"; };
+		AE63B34B195B4BC700C36F5B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		AE63B34D195B4BC700C36F5B /* Body Weight Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Body Weight Manager.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE63B34C195B4BC700C36F5B /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 		AE63B31D195B4AAF00C36F5B = {
 			isa = PBXGroup;
 			children = (
+				AE63B34B195B4BC700C36F5B /* HealthKit.framework */,
 				AE63B328195B4AB000C36F5B /* Body Weight Manager */,
 				AE63B33E195B4AB000C36F5B /* Body Weight ManagerTests */,
 				AE63B327195B4AB000C36F5B /* Products */,
@@ -77,6 +82,7 @@
 		AE63B328195B4AB000C36F5B /* Body Weight Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AE63B34D195B4BC700C36F5B /* Body Weight Manager.entitlements */,
 				AE63B32B195B4AB000C36F5B /* AppDelegate.swift */,
 				AE63B330195B4AB000C36F5B /* ViewController.swift */,
 				AE63B332195B4AB000C36F5B /* Main.storyboard */,
@@ -161,6 +167,12 @@
 				TargetAttributes = {
 					AE63B325195B4AB000C36F5B = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = HEFSF24EZX;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					AE63B33A195B4AB000C36F5B = {
 						CreatedOnToolsVersion = 6.0;
@@ -331,9 +343,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Body Weight Manager/Body Weight Manager.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Body Weight Manager/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -342,9 +359,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Body Weight Manager/Body Weight Manager.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Body Weight Manager/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
