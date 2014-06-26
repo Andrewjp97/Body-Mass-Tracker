@@ -17,44 +17,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-Y8-kRv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-Y8-kRv">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="eGl-8W-SbD">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="qls-NW-O78">
                                 <rect key="frame" x="229" y="443" width="23" height="37"/>
                             </pageControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uif-TE-9KI" customClass="GraphView" customModule="GraphView">
-                                <rect key="frame" x="20" y="269" width="440" height="179"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TC-j9-S5Y" customClass="GraphView" customModule="GraphView">
+                                <rect key="frame" x="20" y="295" width="440" height="154"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="uif-TE-9KI" secondAttribute="height" multiplier="440:179" id="hRj-Vp-OKl"/>
+                                    <constraint firstAttribute="width" secondItem="1TC-j9-S5Y" secondAttribute="height" multiplier="20:7" id="o97-Jy-cYt"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="backgroundTransparency">
-                                        <real key="value" value="0.29999999999999999"/>
+                                        <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="barLineWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="H1c-2d-c90" appends="YES" id="u2Z-oJ-bPX"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="eGl-8W-SbD" secondAttribute="centerX" id="MpX-Kg-8r7"/>
-                            <constraint firstAttribute="trailing" secondItem="uif-TE-9KI" secondAttribute="trailing" constant="20" id="bi4-C4-3vN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eGl-8W-SbD" secondAttribute="bottom" id="opC-Kc-0pY"/>
-                            <constraint firstItem="uif-TE-9KI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="p4U-nE-8lv"/>
-                            <constraint firstItem="eGl-8W-SbD" firstAttribute="top" secondItem="uif-TE-9KI" secondAttribute="bottom" constant="-5" id="vmZ-mV-8ur"/>
+                            <constraint firstItem="1TC-j9-S5Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="55d-OO-ZRF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1TC-j9-S5Y" secondAttribute="bottom" constant="31" id="K69-K0-GnZ"/>
+                            <constraint firstItem="fiq-Y8-kRv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MDz-Sw-QPe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fiq-Y8-kRv" secondAttribute="bottom" id="QDf-Bh-NRy"/>
+                            <constraint firstAttribute="trailing" secondItem="1TC-j9-S5Y" secondAttribute="trailing" constant="20" id="aw0-I6-ZVw"/>
+                            <constraint firstAttribute="centerX" secondItem="qls-NW-O78" secondAttribute="centerX" id="eCR-MV-nS3"/>
+                            <constraint firstItem="fiq-Y8-kRv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eXL-oT-8mq"/>
+                            <constraint firstAttribute="trailing" secondItem="fiq-Y8-kRv" secondAttribute="trailing" id="rT9-6m-Ggt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qls-NW-O78" secondAttribute="bottom" id="vwX-Ow-JiW"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="graphView" destination="1TC-j9-S5Y" id="ygO-cg-bqv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="H1c-2d-c90"/>
             </objects>
         </scene>
     </scenes>

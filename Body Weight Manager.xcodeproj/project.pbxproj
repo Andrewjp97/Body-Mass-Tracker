@@ -19,6 +19,7 @@
 		AEC22B44195C3AAA00E3BB24 /* GraphViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC22B43195C3AAA00E3BB24 /* GraphViewTests.swift */; };
 		AEC22B47195C3AAA00E3BB24 /* GraphView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC22B32195C3AAA00E3BB24 /* GraphView.framework */; };
 		AEC22B48195C3AAA00E3BB24 /* GraphView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEC22B32195C3AAA00E3BB24 /* GraphView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AEC22B57195C3AC500E3BB24 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC22B56195C3AC500E3BB24 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,13 @@
 			remoteInfo = GraphView;
 		};
 		AEC22B52195C3AAB00E3BB24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE63B31E195B4AAF00C36F5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEC22B31195C3AAA00E3BB24;
+			remoteInfo = GraphView;
+		};
+		AEC22B54195C3AAB00E3BB24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AE63B31E195B4AAF00C36F5B /* Project object */;
 			proxyType = 1;
@@ -92,6 +100,8 @@
 		AEC22B3C195C3AAA00E3BB24 /* GraphViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC22B42195C3AAA00E3BB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEC22B43195C3AAA00E3BB24 /* GraphViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewTests.swift; sourceTree = "<group>"; };
+		AEC22B56195C3AC500E3BB24 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		AEC22B58195C69DA00E3BB24 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +169,7 @@
 				AE63B32B195B4AB000C36F5B /* AppDelegate.swift */,
 				AE63B330195B4AB000C36F5B /* ViewController.swift */,
 				AE63B332195B4AB000C36F5B /* Main.storyboard */,
+				AEC22B58195C69DA00E3BB24 /* MyPlayground.playground */,
 				AE63B335195B4AB000C36F5B /* Images.xcassets */,
 				AE63B32D195B4AB000C36F5B /* Body_Weight_Manager.xcdatamodeld */,
 				AE63B329195B4AB000C36F5B /* Supporting Files */,
@@ -196,6 +207,7 @@
 			children = (
 				AEC22B36195C3AAA00E3BB24 /* GraphView.h */,
 				AEC22B34195C3AAA00E3BB24 /* Supporting Files */,
+				AEC22B56195C3AC500E3BB24 /* GraphView.swift */,
 			);
 			path = GraphView;
 			sourceTree = "<group>";
@@ -308,6 +320,7 @@
 			dependencies = (
 				AEC22B3F195C3AAA00E3BB24 /* PBXTargetDependency */,
 				AEC22B53195C3AAB00E3BB24 /* PBXTargetDependency */,
+				AEC22B55195C3AAB00E3BB24 /* PBXTargetDependency */,
 			);
 			name = GraphViewTests;
 			productName = GraphViewTests;
@@ -423,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC22B57195C3AC500E3BB24 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +475,11 @@
 			isa = PBXTargetDependency;
 			target = AEC22B31195C3AAA00E3BB24 /* GraphView */;
 			targetProxy = AEC22B52195C3AAB00E3BB24 /* PBXContainerItemProxy */;
+		};
+		AEC22B55195C3AAB00E3BB24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEC22B31195C3AAA00E3BB24 /* GraphView */;
+			targetProxy = AEC22B54195C3AAB00E3BB24 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -626,6 +645,7 @@
 		AEC22B4B195C3AAA00E3BB24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -641,8 +661,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -651,6 +673,7 @@
 		AEC22B4C195C3AAA00E3BB24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -662,6 +685,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -738,6 +762,7 @@
 				AEC22B4C195C3AAA00E3BB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEC22B51195C3AAA00E3BB24 /* Build configuration list for PBXNativeTarget "GraphViewTests" */ = {
 			isa = XCConfigurationList;
@@ -746,6 +771,7 @@
 				AEC22B4E195C3AAA00E3BB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
