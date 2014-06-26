@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,8 +20,36 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-Y8-kRv">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                             </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="eGl-8W-SbD">
+                                <rect key="frame" x="229" y="443" width="23" height="37"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uif-TE-9KI" customClass="GraphView" customModule="GraphView">
+                                <rect key="frame" x="20" y="269" width="440" height="179"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uif-TE-9KI" secondAttribute="height" multiplier="440:179" id="hRj-Vp-OKl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundTransparency">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barLineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eGl-8W-SbD" secondAttribute="centerX" id="MpX-Kg-8r7"/>
+                            <constraint firstAttribute="trailing" secondItem="uif-TE-9KI" secondAttribute="trailing" constant="20" id="bi4-C4-3vN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eGl-8W-SbD" secondAttribute="bottom" id="opC-Kc-0pY"/>
+                            <constraint firstItem="uif-TE-9KI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="p4U-nE-8lv"/>
+                            <constraint firstItem="eGl-8W-SbD" firstAttribute="top" secondItem="uif-TE-9KI" secondAttribute="bottom" constant="-5" id="vmZ-mV-8ur"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

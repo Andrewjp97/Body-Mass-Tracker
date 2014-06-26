@@ -14,6 +14,11 @@
 		AE63B336195B4AB000C36F5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE63B335195B4AB000C36F5B /* Images.xcassets */; };
 		AE63B342195B4AB000C36F5B /* Body_Weight_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63B341195B4AB000C36F5B /* Body_Weight_ManagerTests.swift */; };
 		AE63B34C195B4BC700C36F5B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE63B34B195B4BC700C36F5B /* HealthKit.framework */; };
+		AEC22B37195C3AAA00E3BB24 /* GraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC22B36195C3AAA00E3BB24 /* GraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEC22B3D195C3AAA00E3BB24 /* GraphView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC22B32195C3AAA00E3BB24 /* GraphView.framework */; };
+		AEC22B44195C3AAA00E3BB24 /* GraphViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC22B43195C3AAA00E3BB24 /* GraphViewTests.swift */; };
+		AEC22B47195C3AAA00E3BB24 /* GraphView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC22B32195C3AAA00E3BB24 /* GraphView.framework */; };
+		AEC22B48195C3AAA00E3BB24 /* GraphView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEC22B32195C3AAA00E3BB24 /* GraphView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +29,49 @@
 			remoteGlobalIDString = AE63B325195B4AB000C36F5B;
 			remoteInfo = "Body Weight Manager";
 		};
+		AEC22B3E195C3AAA00E3BB24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE63B31E195B4AAF00C36F5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEC22B31195C3AAA00E3BB24;
+			remoteInfo = GraphView;
+		};
+		AEC22B45195C3AAA00E3BB24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE63B31E195B4AAF00C36F5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEC22B31195C3AAA00E3BB24;
+			remoteInfo = GraphView;
+		};
+		AEC22B49195C3AAA00E3BB24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE63B31E195B4AAF00C36F5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEC22B31195C3AAA00E3BB24;
+			remoteInfo = GraphView;
+		};
+		AEC22B52195C3AAB00E3BB24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE63B31E195B4AAF00C36F5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEC22B31195C3AAA00E3BB24;
+			remoteInfo = GraphView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AEC22B50195C3AAA00E3BB24 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AEC22B48195C3AAA00E3BB24 /* GraphView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AE63B326195B4AB000C36F5B /* Body Weight Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Body Weight Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +86,12 @@
 		AE63B341195B4AB000C36F5B /* Body_Weight_ManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body_Weight_ManagerTests.swift; sourceTree = "<group>"; };
 		AE63B34B195B4BC700C36F5B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		AE63B34D195B4BC700C36F5B /* Body Weight Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Body Weight Manager.entitlements"; sourceTree = "<group>"; };
+		AEC22B32195C3AAA00E3BB24 /* GraphView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC22B35195C3AAA00E3BB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEC22B36195C3AAA00E3BB24 /* GraphView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		AEC22B3C195C3AAA00E3BB24 /* GraphViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC22B42195C3AAA00E3BB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEC22B43195C3AAA00E3BB24 /* GraphViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC22B47195C3AAA00E3BB24 /* GraphView.framework in Frameworks */,
 				AE63B34C195B4BC700C36F5B /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +108,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC22B2E195C3AAA00E3BB24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC22B39195C3AAA00E3BB24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC22B3D195C3AAA00E3BB24 /* GraphView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +135,8 @@
 				AE63B34B195B4BC700C36F5B /* HealthKit.framework */,
 				AE63B328195B4AB000C36F5B /* Body Weight Manager */,
 				AE63B33E195B4AB000C36F5B /* Body Weight ManagerTests */,
+				AEC22B33195C3AAA00E3BB24 /* GraphView */,
+				AEC22B40195C3AAA00E3BB24 /* GraphViewTests */,
 				AE63B327195B4AB000C36F5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +146,8 @@
 			children = (
 				AE63B326195B4AB000C36F5B /* Body Weight Manager.app */,
 				AE63B33B195B4AB000C36F5B /* Body Weight ManagerTests.xctest */,
+				AEC22B32195C3AAA00E3BB24 /* GraphView.framework */,
+				AEC22B3C195C3AAA00E3BB24 /* GraphViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,7 +191,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AEC22B33195C3AAA00E3BB24 /* GraphView */ = {
+			isa = PBXGroup;
+			children = (
+				AEC22B36195C3AAA00E3BB24 /* GraphView.h */,
+				AEC22B34195C3AAA00E3BB24 /* Supporting Files */,
+			);
+			path = GraphView;
+			sourceTree = "<group>";
+		};
+		AEC22B34195C3AAA00E3BB24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEC22B35195C3AAA00E3BB24 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEC22B40195C3AAA00E3BB24 /* GraphViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEC22B43195C3AAA00E3BB24 /* GraphViewTests.swift */,
+				AEC22B41195C3AAA00E3BB24 /* Supporting Files */,
+			);
+			path = GraphViewTests;
+			sourceTree = "<group>";
+		};
+		AEC22B41195C3AAA00E3BB24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEC22B42195C3AAA00E3BB24 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AEC22B2F195C3AAA00E3BB24 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC22B37195C3AAA00E3BB24 /* GraphView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		AE63B325195B4AB000C36F5B /* Body Weight Manager */ = {
@@ -128,10 +246,13 @@
 				AE63B322195B4AB000C36F5B /* Sources */,
 				AE63B323195B4AB000C36F5B /* Frameworks */,
 				AE63B324195B4AB000C36F5B /* Resources */,
+				AEC22B50195C3AAA00E3BB24 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AEC22B46195C3AAA00E3BB24 /* PBXTargetDependency */,
+				AEC22B4A195C3AAA00E3BB24 /* PBXTargetDependency */,
 			);
 			name = "Body Weight Manager";
 			productName = "Body Weight Manager";
@@ -156,6 +277,43 @@
 			productReference = AE63B33B195B4AB000C36F5B /* Body Weight ManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AEC22B31195C3AAA00E3BB24 /* GraphView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC22B4F195C3AAA00E3BB24 /* Build configuration list for PBXNativeTarget "GraphView" */;
+			buildPhases = (
+				AEC22B2D195C3AAA00E3BB24 /* Sources */,
+				AEC22B2E195C3AAA00E3BB24 /* Frameworks */,
+				AEC22B2F195C3AAA00E3BB24 /* Headers */,
+				AEC22B30195C3AAA00E3BB24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphView;
+			productName = GraphView;
+			productReference = AEC22B32195C3AAA00E3BB24 /* GraphView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AEC22B3B195C3AAA00E3BB24 /* GraphViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC22B51195C3AAA00E3BB24 /* Build configuration list for PBXNativeTarget "GraphViewTests" */;
+			buildPhases = (
+				AEC22B38195C3AAA00E3BB24 /* Sources */,
+				AEC22B39195C3AAA00E3BB24 /* Frameworks */,
+				AEC22B3A195C3AAA00E3BB24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEC22B3F195C3AAA00E3BB24 /* PBXTargetDependency */,
+				AEC22B53195C3AAB00E3BB24 /* PBXTargetDependency */,
+			);
+			name = GraphViewTests;
+			productName = GraphViewTests;
+			productReference = AEC22B3C195C3AAA00E3BB24 /* GraphViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -178,6 +336,14 @@
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = AE63B325195B4AB000C36F5B;
 					};
+					AEC22B31195C3AAA00E3BB24 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = HEFSF24EZX;
+					};
+					AEC22B3B195C3AAA00E3BB24 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = AEC22B31195C3AAA00E3BB24;
+					};
 				};
 			};
 			buildConfigurationList = AE63B321195B4AAF00C36F5B /* Build configuration list for PBXProject "Body Weight Manager" */;
@@ -195,6 +361,8 @@
 			targets = (
 				AE63B325195B4AB000C36F5B /* Body Weight Manager */,
 				AE63B33A195B4AB000C36F5B /* Body Weight ManagerTests */,
+				AEC22B31195C3AAA00E3BB24 /* GraphView */,
+				AEC22B3B195C3AAA00E3BB24 /* GraphViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -210,6 +378,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AE63B339195B4AB000C36F5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC22B30195C3AAA00E3BB24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC22B3A195C3AAA00E3BB24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,6 +419,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEC22B2D195C3AAA00E3BB24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC22B38195C3AAA00E3BB24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC22B44195C3AAA00E3BB24 /* GraphViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -244,6 +441,26 @@
 			isa = PBXTargetDependency;
 			target = AE63B325195B4AB000C36F5B /* Body Weight Manager */;
 			targetProxy = AE63B33C195B4AB000C36F5B /* PBXContainerItemProxy */;
+		};
+		AEC22B3F195C3AAA00E3BB24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEC22B31195C3AAA00E3BB24 /* GraphView */;
+			targetProxy = AEC22B3E195C3AAA00E3BB24 /* PBXContainerItemProxy */;
+		};
+		AEC22B46195C3AAA00E3BB24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEC22B31195C3AAA00E3BB24 /* GraphView */;
+			targetProxy = AEC22B45195C3AAA00E3BB24 /* PBXContainerItemProxy */;
+		};
+		AEC22B4A195C3AAA00E3BB24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEC22B31195C3AAA00E3BB24 /* GraphView */;
+			targetProxy = AEC22B49195C3AAA00E3BB24 /* PBXContainerItemProxy */;
+		};
+		AEC22B53195C3AAB00E3BB24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEC22B31195C3AAA00E3BB24 /* GraphView */;
+			targetProxy = AEC22B52195C3AAB00E3BB24 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -406,6 +623,84 @@
 			};
 			name = Release;
 		};
+		AEC22B4B195C3AAA00E3BB24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GraphView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEC22B4C195C3AAA00E3BB24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GraphView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEC22B4D195C3AAA00E3BB24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GraphViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AEC22B4E195C3AAA00E3BB24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GraphViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,12 +720,30 @@
 				AE63B347195B4AB000C36F5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE63B348195B4AB000C36F5B /* Build configuration list for PBXNativeTarget "Body Weight ManagerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE63B349195B4AB000C36F5B /* Debug */,
 				AE63B34A195B4AB000C36F5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEC22B4F195C3AAA00E3BB24 /* Build configuration list for PBXNativeTarget "GraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC22B4B195C3AAA00E3BB24 /* Debug */,
+				AEC22B4C195C3AAA00E3BB24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AEC22B51195C3AAA00E3BB24 /* Build configuration list for PBXNativeTarget "GraphViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC22B4D195C3AAA00E3BB24 /* Debug */,
+				AEC22B4E195C3AAA00E3BB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

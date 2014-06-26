@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GraphView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>AE63B33A195B4AB000C36F5B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEC22B31195C3AAA00E3BB24</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEC22B3B195C3AAA00E3BB24</key>
 		<dict>
 			<key>primary</key>
 			<true/>
