@@ -56,24 +56,7 @@ import QuartzCore
   var bottomBar: CAShapeLayer = CAShapeLayer()
   var tickMarks: CAShapeLayer[] = []
   var lineGraph: CAShapeLayer = CAShapeLayer()
-  var blurEffectView: UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
-  var vibrancyEffectView: UIVisualEffectView = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: UIBlurEffect(style: .Dark)))
-  var backingView: UIView = UIView()
-  var graphView: UIView = UIView()
-  var intervalLabels: String[] = [] {
-  willSet {
-    for string in newValue {
-      let textlayer = CATextLayer()
-      textlayer.font = "Helvetica"
-      textlayer.foregroundColor = UIColor.whiteColor().CGColor
-      textlayer.fontSize = 8.0
-      textlayer.string = string
-      interalLabelViews.append(textlayer)
-    }
-  }
-  }
-  var interalLabelViews: CATextLayer[] = []
-  
+  var intervalLabels: String[] = []
   init(coder aDecoder: NSCoder!) {
     super.init(coder: aDecoder)
     // Initialization code
@@ -85,11 +68,6 @@ import QuartzCore
   }
   
   override func layoutSubviews() {
-    self.backingView = UIView(frame: self.frame)
-    self.blurEffectView.frame = self.bounds
-    self.vibrancyEffectView.frame = self.bounds
-    self.addSubview(self.blurEffectView)
-    self.blurEffectView.contentView.addSubview(vibrancyEffectView)
     self.backgroundColor = UIColor.clearColor()
     self.drawBackground()
     self.drawBars()
@@ -107,12 +85,11 @@ import QuartzCore
   
   func drawBackground() {
     self.backgroundLayer.removeFromSuperlayer()
-    backgroundLayer.fillColor = UIColor(white: 0.5, alpha: 0.0).CGColor
+    backgroundLayer.fillColor = UIColor(white: 0.0, alpha: self.backgroundTransparency).CGColor
     var path = UIBezierPath(roundedRect: self.frame, cornerRadius: self.cornerRadius)
     backgroundLayer.path = path.CGPath
     
-    self.backingView.layer.addSublayer(backgroundLayer)
-    self.blurEffectView.contentView.addSubview(backingView)
+    self.layer.addSublayer(backgroundLayer)
   }
   
   func drawBars() {
@@ -127,7 +104,7 @@ import QuartzCore
     topPath.moveToPoint(CGPointMake(10.0, 20.0))
     topPath.addLineToPoint(CGPointMake(CGRectGetWidth(self.frame) - 10.0, 20.0))
     topBar.path = topPath.CGPath
-    self.graphView.layer.addSublayer(topBar)
+    self.layer.addSublayer(topBar)
     
     middleBar.lineWidth = self.barLineWidth
     middleBar.lineCap = kCALineCapRound
@@ -136,7 +113,7 @@ import QuartzCore
     middlePath.moveToPoint(CGPointMake(10.0, CGRectGetMidY(self.frame)))
     middlePath.addLineToPoint(CGPointMake(CGRectGetWidth(self.frame) - 10.0, CGRectGetMidY(self.frame)))
     middleBar.path = middlePath.CGPath
-    self.graphView.layer.addSublayer(middleBar)
+    self.layer.addSublayer(middleBar)
     
     bottomBar.lineWidth = self.barLineWidth
     bottomBar.lineCap = kCALineCapRound
@@ -145,7 +122,7 @@ import QuartzCore
     bottomPath.moveToPoint(CGPointMake(10.0, CGRectGetHeight(self.frame) - 20.0))
     bottomPath.addLineToPoint(CGPointMake(CGRectGetWidth(self.frame) - 10.0, CGRectGetHeight(self.frame) - 20.0))
     bottomBar.path = bottomPath.CGPath
-    self.graphView.layer.addSublayer(bottomBar)
+    self.layer.addSublayer(bottomBar)
   }
   
   func drawTickMarks() {
@@ -163,12 +140,12 @@ import QuartzCore
       markPath.moveToPoint(CGPointMake(xPosition, CGRectGetHeight(self.frame) - 20.0 + self.barLineWidth))
       markPath.addLineToPoint(CGPointMake(xPosition, CGRectGetHeight(self.frame) - 20.0 - self.barLineWidth))
       mark.path = markPath.CGPath
-      self.graphView.layer.addSublayer(mark)
+      self.layer.addSublayer(mark)
       let label = CATextLayer()
       label.fontSize = 10.0
       label.frame = CGRectMake(xPosition - 8, CGRectGetHeight(self.frame) - 15,  30.0, 20.0)
       label.string = self.intervalLabels[i]
-      self.graphView.layer.addSublayer(label)
+      self.layer.addSublayer(label)
       self.tickMarks.append(mark)
     }
   }
@@ -213,8 +190,7 @@ import QuartzCore
     }
     
     lineGraph.path = path.CGPath
-    self.graphView.layer.addSublayer(lineGraph)
-    self.vibrancyEffectView.addSubview(graphView)
+    self.layer.addSublayer(lineGraph)
   }
   
   func convertValueToYCoordinate(value: Double) -> CGFloat {
